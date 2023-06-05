@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <title>3D Navbar Animation</title>
     <link rel="stylesheet" href="Style.css" />
   </head>
@@ -32,12 +33,39 @@
             </div>
           </header>
         </div>
+     </div>
+     <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="img/tlo.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/cliamb.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/Cliamb2.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/Cliamb3.jpg" />
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <div id="text">
+        <nav>
+            <div class="article">
+              <h4>
+                  You want climp
+              </h4>
+            </div>
+        </nav>
+    </div>
         <div class="shadow one"></div>
         <div class="shadow two"></div>
         <div class="links">
           <ul>
             <li>
-              <a href="#" style="--i: 0.05s;">Home</a>
+              <a href="http://localhost/form/index.html" style="--i: 0.05s;">Home</a>
             </li>
             <li>
               <a href="#" style="--i: 0.1s;">Services</a>
@@ -54,8 +82,28 @@
             <li>
               <a href="#" style="--i: 0.3s;">Contact</a>
             </li>
+            <li>
+              <a href="http://localhost/form/login.html" style="--i: 0.3s;">Login</a>
+            </li>
           </ul>
         </div>
         <script src="app.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     </body>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "cube",
+        grabCursor: true,
+        cubeEffect: {
+          shadow: true,
+          slideShadows: true,
+          shadowOffset: 20,
+          shadowScale: 0.94,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
 </html>
